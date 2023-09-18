@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-include <behaviors.dtsi>
-include <dt-bindings/zmk/keys.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 include <dt-bindings/zmk/bt.h>
-include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 / {
     keymap {
@@ -19,7 +19,7 @@ include <dt-bindings/zmk/ext_power.h>
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
 // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| &bt BT_CLR | GUI   |
+//                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BT_CLR | GUI   |
             bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
