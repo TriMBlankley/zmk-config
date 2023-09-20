@@ -51,15 +51,15 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |     |  {  |  }   |  ^   |  +   |                   |  |   |   7   |   8   |  9   |       | VOLCTR |
+// |  ESC  |  $  |  {  |  }   |  ^   |  +   |                   |  |   |   7   |   8   |  9   |       | VOLCTR |
 // |  TAB  |  #  |  (  |  )   |  *   |  =   |                   |  \   |   4   |   5   |  6   |       | DELETE |
-// | SHIFT |     |  [  |  ]   |  %   |  -   |                   |  /   |   1   |   2   |  3   |       | RSHFT  |
+// | SHIFT |  &  |  [  |  ]   |  %   |  -   |                   |  /   |   1   |   2   |  3   |       | RSHFT  |
 // | CTRL  |  @  |  ~  |  `   | Fn?  |  _   |        |  |       |      |   0   |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
-&kp ESC    &trans    &kp LBRC   &kp RBRC   &kp CARET  &kp PLUS                       &kp PIPE2  &kp N7   &kp N8   &kp N9   &trans   &trans
+&kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp CARET  &kp PLUS                       &kp PIPE   &kp N7   &kp N8   &kp N9   &trans   &trans
 &kp TAB    &kp HASH  &kp LPAR   &kp RPAR   &kp ASTRK  &kp EQUAL                      &kp BSLH   &kp N4   &kp N5   &kp N6   &trans   &kp DELETE
-&kp LSHFT  &trans    &kp LBKT   &kp RBKT   &kp PRCNT  &kp MINUS                      &kp FSLH   &kp N1   &kp N2   &kp N3   &trans   &kp RSHFT
+&kp LSHFT  &kp AMPS  &kp LBKT   &kp RBKT   &kp PRCNT  &kp MINUS                      &kp FSLH   &kp N1   &kp N2   &kp N3   &trans   &kp RSHFT
 &kp LCTRL  &kp AT    &kp TILDE  &kp GRAVE  &trans     &KP UNDER  &trans     &trans   &trans     &kp N0   &trans   &trans   &trans   &kp RCTRL
                                 &kp LGUI   &kp LALT   &mo 1     &kp SPACE   &kp BSPC &mo 2      &kp RET  &kp RALT
             >;
