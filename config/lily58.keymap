@@ -19,7 +19,7 @@
 // |  TAB  |  A  |  S  |  H   |  T   |  G   |                   |  Y   |  N   |  E    |  O   |   I   | DELETE |
 // | SHIFT |  Z  |  X  |  M   |  C   |  V   |                   |  K   |  L   |  ,    |  .   |   /   | RSHFT  |
 // | CTRL  |     |     |      |     |       |       |   |       |      |      |       |      |       | RCTRL  |
-//                    | ALT  | GUI  | LOWER|  SPACE |   | BKSPC | RAISE| Ent  |      |
+//                    | ALT  | GUI  | LOWER|  SPACE |   | BKSPC | RAISE| ENT  |  ALT  |
             bindings = <
 &kp ESC    &kp Q   &kp D   &kp R    &kp W   &kp B                         &kp J   &kp F     &kp U      &kp P    &kp SEMI   &kp PSCRN
 &kp TAB    &kp A   &kp S   &kp H    &kp T   &kp G                         &kp Y   &kp N     &kp E      &kp O    &kp I      &kp DELETE
@@ -33,16 +33,16 @@
 
         lower_layer {
 // ------------------------------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  BT_CLR |  BT_SEL 0   |  BT_SEL 1 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-// |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-//                     |      |      |      |        |  |       |      |       |       |
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |   ^   |      |  >=   | VOLCTR |
+// |  TAB  |     |     |      |      |      |                   |      |   <-  |   V   | ->   |       | DELETE |
+// | SHIFT |     |     |      |      |      |                   |      |       |       |      |       | RSHFT  |
+// | CTRL  |     |     |      |      |      |        |  |       |      |       |       |      |       | RCTRL  |
+//                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE| ENT   | BTCLR |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3 &bt BT_SEL 4                 &trans    &trans    &trans          &trans    &trans    &trans
-&kp F1     &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp PIPE
+&kp TAB    &kp F2           &kp F3            &kp F4            &kp F5       &kp F6                       &kp F7    &kp F8    &kp F9          &kp F10   &kp F11   &kp DELETE
+&kp LSHFT  &kp EXCL         &kp AT            &kp HASH          &kp DOLLAR   &kp PRCNT                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp RSHFT
+&kp LCTRL  &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG &trans       &trans    &trans   &trans    &trans    &kp MINUS &kp KP_PLUS     &kp LBRC  &kp RBRC  &kp RCTRL
                                               &trans            &trans       &trans    &trans   &trans    &trans    &bt BT_CLR    &trans
             >;
 
