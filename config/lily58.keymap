@@ -19,7 +19,7 @@
 // |  TAB  |  A  |  S  |  H   |  T   |  G   |                   |  Y   |  N   |  E    |  O   |   I   | DELETE |
 // | SHIFT |  Z  |  X  |  M   |  C   |  V   |                   |  K   |  L   |  ,    |  .   |   /   | RSHFT  |
 // | CTRL  |  @  |     |      |      |      |       |   |       |      |      |       |      |       | RCTRL  |
-//                    |  ALT  | GUI  |LOWER | SPACE |   | BKSPC | RAISE| ENT  |  ALT  |
+//                     | GUI  | LALT |LOWER | SPACE |   | BKSPC | RAISE| ENT  |  ALT  |
             bindings = <
 &kp ESC    &kp Q   &kp D   &kp R     &kp W     &kp B                             &kp J   &kp F     &kp U      &kp P    &kp SEMI   &kp PSCRN
 &kp TAB    &kp A   &kp S   &kp H     &kp T     &kp G                             &kp Y   &kp N     &kp E      &kp O    &kp I      &kp DELETE
@@ -43,7 +43,7 @@
 &kp TAB    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                            &trans    &KP LEFT    &KP DOWN  &tKP RIGHT  &trans   &kp DELETE
 &kp LSHFT  &trans        &kp DEL       &kp END       &kp PG_DN     &trans                            &trans    &trans      &trans    &trans      &trans   &kp RSHFT
 &kp LCTRL  &trans        &trans        &trans        &trans        &trans     &trans       &trans    &trans    &trans      &trans    &trans      &trans   &kp RCTRL
-                                       &&kp LGUI     &kp LALT       &mo 1     &kp SPACE    &kp BSPC  &mo 2     &bt BT_CLR  &kp RALT
+                                       &kp LGUI      &kp LALT      &mo 1      &kp SPACE    &kp BSPC  &mo 2     &bt BT_CLR  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -51,9 +51,9 @@
 
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |     |     |      |      |      |                   |      |       |       |      |       | VOLCTR |
-// |  TAB  |     |     |      |      |      |                   |      |       |       |      |       | DELETE |
-// | SHIFT |     |     |      |      |      |                   |      |       |       |      |       | RSHFT  |
+// |  ESC  |     |  {  |  }   |  ^   |  +   |                   |      |       |       |      |       | VOLCTR |
+// |  TAB  |     |  (  |  )   |      |      |                   |      |       |       |      |       | DELETE |
+// | SHIFT |     |  [  |  ]   |      |      |                   |      |       |       |      |       | RSHFT  |
 // | CTRL  |     |     |      |      |      |        |  |       |      |       |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
