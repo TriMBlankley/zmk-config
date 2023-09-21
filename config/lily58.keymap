@@ -19,12 +19,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
-    };
-};
-
-
-/ {
-    behaviors {
         excl_qmark: exclamation_queationmark {
             compatible = "zmk,behavior-mod-morph";
             label = "EXCL_QMARK";
