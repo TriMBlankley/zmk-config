@@ -43,6 +43,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+        vol_ctrl: volume_control {
+            compatible = "zmk,behavior-mod-morph";
+            label = "VOL_CTRL";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
     };
 };
 
@@ -77,10 +85,10 @@
 // | CTRL  |     |     |      |      |      |        |  |       |      |       |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE| BTCLR | RALT  |
             bindings = <
-&kp ESC    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans    &trans      &kp UP    &trans      &trans   &trans
-&kp TAB    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                            &trans    &kp LEFT    &kp DOWN  &kp RIGHT   &trans   &kp DELETE
-&kp LSHFT  &trans        &kp DEL       &kp END       &kp PG_DN     &trans                            &trans    &trans      &trans    &trans      &trans   &kp RSHFT
-&kp LCTRL  &trans        &trans        &trans        &trans        &trans     &trans       &trans    &trans    &trans      &trans    &trans      &trans   &kp RCTRL
+&kp ESC    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans    &trans      &kp UP    &trans       &kp C_PP     &vol_ctrl
+&kp TAB    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                            &trans    &kp LEFT    &kp DOWN  &kp RIGHT    &trans       &kp DELETE
+&kp LSHFT  &trans        &kp DEL       &kp END       &kp PG_DN     &trans                            &trans    &trans      &trans    &trans       &trans       &kp RSHFT
+&kp LCTRL  &trans        &trans        &trans        &trans        &trans     &trans       &trans    &trans    &trans      &trans    &kp C_BRI_DN &kp C_BRI_UP &kp RCTRL
                                        &kp LGUI      &kp LALT      &mo 1      &kp SPACE    &kp BSPC  &mo 2     &bt BT_CLR  &kp RALT
             >;
 
