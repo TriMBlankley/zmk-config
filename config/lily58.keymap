@@ -10,6 +10,19 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
+    behaviors {
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -25,7 +38,7 @@
 &kp TAB    &kp A   &kp S   &kp H     &kp T     &kp G                             &kp Y   &kp N     &kp E      &kp O    &kp I      &kp DELETE
 &kp LSHFT  &kp Z   &kp X   &kp M     &kp C     &kp V                             &kp K   &kp L     &kp COMMA  &kp DOT  &kp FSLH   &kp RSHFT
 &kp LCTRL  &kp AT  &trans  &trans    &trans    &trans   &trans         &trans    &trans  &trans    &trans     &trans   &trans     &kp RCTRL
-                           &kp LGUI  &kp LALT  &mo 1    &kp SPACE      &kp BSPC  &mo 2   &kp RET   &kp RALT
+                           &kp LGUI  &kp LALT  &mo 1    &kp SPACE      &kp BACKSPACE_DELETE  &mo 2   &kp RET   &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
