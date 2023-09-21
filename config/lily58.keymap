@@ -25,7 +25,7 @@
 
 / {
     behaviors {
-        excl_qmark: backspace_delete {
+        excl_qmark: exclamation_queationmark {
             compatible = "zmk,behavior-mod-morph";
             label = "EXCL_QMARK";
             #binding-cells = <0>;
