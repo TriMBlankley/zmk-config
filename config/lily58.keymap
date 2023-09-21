@@ -27,6 +27,22 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+        lpar_lbkt: lparenthesis_lbracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_LBKT";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        rpar_rbkt: rparenthesis_rbracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_LBKT";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
     };
 };
 
@@ -80,8 +96,8 @@
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
 &kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp CARET  &kp PLUS                       &kp PIPE   &kp N7   &kp N8   &kp N9   &trans   &trans
-&kp TAB    &kp HASH  &kp LPAR   &kp RPAR   &kp ASTRK  &kp EQUAL                      &kp BSLH   &kp N4   &kp N5   &kp N6   &trans   &kp DELETE
-&kp LSHFT  &kp AMPS  &kp LBKT   &kp RBKT   &kp PRCNT  &kp MINUS                      &kp FSLH   &kp N1   &kp N2   &kp N3   &trans   &kp RSHFT
+&kp TAB    &kp HASH  &lpar_lbkt &rpar_rbkt &kp ASTRK  &kp EQUAL                      &kp BSLH   &kp N4   &kp N5   &kp N6   &trans   &kp DELETE
+&kp LSHFT  &kp AMPS  &kp LT     &kp GT     &kp PRCNT  &kp MINUS                      &kp FSLH   &kp N1   &kp N2   &kp N3   &trans   &kp RSHFT
 &kp LCTRL  &kp AT    &kp TILDE  &kp GRAVE  &trans     &kp UNDER  &trans     &trans   &trans     &kp N0   &trans   &trans   &trans   &kp RCTRL
                                 &kp LGUI   &kp LALT   &mo 1      &kp SPACE  &kp BSPC &mo 2      &kp RET  &kp RALT
             >;
