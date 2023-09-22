@@ -37,7 +37,7 @@
         };
         rpar_rbkt: rparenthesis_rbracket {
             compatible = "zmk,behavior-mod-morph";
-            label = "LPAR_LBKT";
+            label = "RPAR_RBKT";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp RBKT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
