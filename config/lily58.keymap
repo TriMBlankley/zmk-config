@@ -56,6 +56,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
+        brit_ctrl: brightness_control {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BRIT_CTRL";
+            #binding-cells = <0>;
+            bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
     };
 };
 
@@ -87,13 +95,13 @@
 // |  ESC  | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |   ^   |      |  >=   | VOLCTR |
 // |  TAB  |     | INS | HOME | PG_UP|      |                   |      |   <-  |   V   | ->   |       | DELETE |
 // | SHIFT |     | DEL |  END | PG_DN|      |                   |      |       |       |      |       | RSHFT  |
-// | CTRL  |     |     |      |      |      |        |  |       |      |       |       |      |       | RCTRL  |
+// | CTRL  |     |     |      |      |      |        |  |       |      |       |       |BT CLR|  BRIT | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE| BTCLR | RALT  |
             bindings = <
-&kp ESC    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                                     &trans    &trans     &kp UP      &trans       &kp C_PP     &vol_ctrl
-&kp TAB    &trans        &kp DEL       &kp END       &kp PG_DN     &trans                                     &trans    &kp LEFT   &kp DOWN    &kp RIGHT    &trans       &kp DELETE
-&kp LSHFT  &trans        &trans        &trans        &trans        &trans                                     &trans    &trans     &trans      &trans       &trans       &kp RSHFT
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans       &tog QWERTY  &trans    &trans     &bt BT_CLR  &kp C_BRI_DN &kp C_BRI_UP &kp RCTRL
+&kp ESC    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                                     &trans    &trans     &kp UP     &trans       &kp C_PP     &vol_ctrl
+&kp TAB    &trans        &kp DEL       &kp END       &kp PG_DN     &trans                                     &trans    &kp LEFT   &kp DOWN   &kp RIGHT    &trans       &kp DELETE
+&kp LSHFT  &trans        &trans        &trans        &trans        &trans                                     &trans    &trans     &trans     &trans       &trans       &kp RSHFT
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans       &tog QWERTY  &trans    &trans     &trans     &bt BT_CLR   &brit_ctrl   &kp RCTRL
                                        &kp LGUI      &kp LALT      &mo 1            &kp SPACE    &kp BSPC     &mo 2     &kp RET    &kp RALT
             >;
 
