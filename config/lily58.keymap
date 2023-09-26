@@ -68,7 +68,7 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  Q  |  D  |  R   |  W   |  B   |                       |  J   |  F   |  U    |  P   |   ;   | PSCRN |
 // |  TAB  |  A  |  S  |  H   |  T   |  G   |                       |  Y   |  N   |  E    |  O   |   I   | APOS  |
-// | SHIFT |  Z  |  X  |  M   |  C   |  V   |                       |  K   |  L   |  ,    |  .   |   /   | RSHFT |
+// | SHIFT |  Z  |  X  |  M   |  C   |  V   |                       |  K   |  L   |  ,    |  .   |   !   | RSHFT |
 // | CTRL  |  @  |     |      |      |      |       |   |  TOG      |      |      |       |      |       | RCTRL |
 //                     | GUI  | LALT |LOWER | SPACE |   | BKSPC_DEL | RAISE| ENT  |  ALT  |
             bindings = <
@@ -90,11 +90,11 @@
 // | CTRL  |     |     |      |      |      |        |  |       |      |       |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE| BTCLR | RALT  |
             bindings = <
-&kp ESC    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                      &trans    &trans      &kp UP    &trans       &kp C_PP     &vol_ctrl
-&kp TAB    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                            &trans    &kp LEFT    &kp DOWN  &kp RIGHT    &trans       &kp DELETE
-&kp LSHFT  &trans        &kp DEL       &kp END       &kp PG_DN     &trans                            &trans    &trans      &trans    &trans       &trans       &kp RSHFT
-&kp LCTRL  &trans        &trans        &trans        &trans        &trans     &trans       &trans    &trans    &trans      &trans    &kp C_BRI_DN &kp C_BRI_UP &kp RCTRL
-                                       &kp LGUI      &kp LALT      &mo 1      &kp SPACE    &kp BSPC  &mo 2     &bt BT_CLR  &kp RALT
+&kp ESC    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                                     &trans    &trans     &kp UP      &trans       &kp C_PP     &vol_ctrl
+&kp TAB    &trans        &kp DEL       &kp END       &kp PG_DN     &trans                                     &trans    &kp LEFT   &kp DOWN    &kp RIGHT    &trans       &kp DELETE
+&kp LSHFT  &trans        &trans        &trans        &trans        &trans                                     &trans    &trans     &trans      &trans       &trans       &kp RSHFT
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans       &tog QWERTY  &trans    &trans     &bt BT_CLR  &kp C_BRI_DN &kp C_BRI_UP &kp RCTRL
+                                       &kp LGUI      &kp LALT      &mo 1            &kp SPACE    &kp BSPC     &mo 2     &kp RET    &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -108,11 +108,11 @@
 // | CTRL  |  @  |  ~  |  `   | Fn?  | "_"  |        |  |       |      |   0   |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
-&kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp CARET  &kp PLUS                       &kp PIPE   &kp N7   &kp N8   &kp N9   &trans   &trans
-&kp TAB    &kp HASH  &lpar_lbkt &rpar_rbkt &kp ASTRK  &kp EQUAL                      &kp BSLH   &kp N4   &kp N5   &kp N6   &trans   &kp DELETE
-&kp LSHFT  &kp AMPS  &kp LT     &kp GT     &kp PRCNT  &kp MINUS                      &kp FSLH   &kp N1   &kp N2   &kp N3   &trans   &kp RSHFT
-&kp LCTRL  &kp AT    &kp TILDE  &kp GRAVE  &trans     &kp UNDER  &trans     &trans   &trans     &kp N0   &trans   &trans   &trans   &kp RCTRL
-                                &kp LGUI   &kp LALT   &mo 1      &kp SPACE  &kp BSPC &mo 2      &kp RET  &kp RALT
+&kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp CARET  &kp PLUS                           &kp PIPE   &kp N7   &kp N8   &kp N9   &trans   &trans
+&kp TAB    &kp HASH  &lpar_lbkt &rpar_rbkt &kp ASTRK  &kp EQUAL                          &kp BSLH   &kp N4   &kp N5   &kp N6   &trans   &kp DELETE
+&kp LSHFT  &kp AMPS  &kp LT     &kp GT     &kp PRCNT  &kp MINUS                          &kp FSLH   &kp N1   &kp N2   &kp N3   &trans   &kp RSHFT
+&kp LCTRL  &kp AT    &kp TILDE  &kp GRAVE  &trans     &kp UNDER  &trans     &tog QWERTY  &trans     &kp N0   &trans   &trans   &trans   &kp RCTRL
+                                &kp LGUI   &kp LALT   &mo 1      &kp SPACE  &kp BSPC     &mo 2      &kp RET  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -128,9 +128,9 @@
             bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                        &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                         &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-&kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &tog QWERTY &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                        &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET     &mo 2  &kp BSPC &kp RGUI
+&kp LSHFT &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp RSHFT
+&kp LCTRL &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &tog QWERTY &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RCTRL
+                        &kp LGUI  &kp LALT  &mo 1    &kp SPACE      &bspc_del   &mo 2   &kp RET   &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
