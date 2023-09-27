@@ -77,7 +77,7 @@
 // |  ESC  |  Q  |  D  |  R   |  W   |  B   |                       |  J   |  F   |  U    |  P   |   ;   | PSCRN |
 // |  TAB  |  A  |  S  |  H   |  T   |  G   |                       |  Y   |  N   |  E    |  O   |   I   | APOS  |
 // | SHIFT |  Z  |  X  |  M   |  C   |  V   |                       |  K   |  L   |  ,    |  .   |   !   | RSHFT |
-// | CTRL  |  @  |     |      |      |      |       |   |  TOG      |      |      |       |      |       | RCTRL |
+// | CTRL  |  @  |     |      |      |      |       |   |  TOG QWER |      |      |       |      |       | RCTRL |
 //                     | GUI  | LALT |LOWER | SPACE |   | BKSPC_DEL | RAISE| ENT  |  ALT  |
             bindings = <
 &kp ESC    &kp Q   &kp D   &kp R     &kp W     &kp B                               &kp J   &kp F     &kp U      &kp P    &kp SEMI    &kp PSCRN
@@ -92,16 +92,16 @@
 
         control_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |   ^   |      |  >=   | VOLCTR |
-// |  TAB  |     | INS | HOME | PG_UP|      |                   |      |   <-  |   V   | ->   |       | DELETE |
-// | SHIFT |     | DEL |  END | PG_DN|      |                   |      |       |       |      |       | RSHFT  |
-// | CTRL  |     |     |      |      |      |        |  |       |      |       |       |BT CLR|  BRIT | RCTRL  |
+// |  ESC  |     | INS | HOME | PG_UP|      |                   |      |       |   ^   |  >=   | VOL_DN| VOL_UP |
+// |  TAB  |     | DEL |  END | PG_DN|      |                   |      |   <-  |   V   |  ->   |       |        |
+// | SHIFT |     |     |      |      |      |                   |      |       |       |       |       | RSHFT  |
+// | CTRL  | BT1 | BT2 |  BT3 |  BT4 |  BT5 |        |  |       |      |       |BT CLR | BRI_DN| BRI_UP| RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE| BTCLR | RALT  |
             bindings = <
-&kp ESC    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                                     &trans    &trans     &kp UP     &trans       &kp C_PP     &vol_ctrl
-&kp TAB    &trans        &kp DEL       &kp END       &kp PG_DN     &trans                                     &trans    &kp LEFT   &kp DOWN   &kp RIGHT    &trans       &kp DELETE
+&kp ESC    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                                     &trans    &trans     &kp UP     &kp C_PP     &kp C_VOL_DN &kp C_VOL_UP
+&kp TAB    &trans        &kp DEL       &kp END       &kp PG_DN     &trans                                     &trans    &kp LEFT   &kp DOWN   &kp RIGHT    &trans       &trans
 &kp LSHFT  &trans        &trans        &trans        &trans        &trans                                     &trans    &trans     &trans     &trans       &trans       &kp RSHFT
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans       &tog QWERTY  &trans    &trans     &trans     &bt BT_CLR   &brit_ctrl   &kp RCTRL
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans       &tog QWERTY  &trans    &trans     &bt BT_CLR &kp C_BRI_DN &kp C_BRI_UP &kp RCTRL
                                        &kp LGUI      &kp LALT      &mo 1            &kp SPACE    &kp BSPC     &mo 2     &kp RET    &kp RALT
             >;
 
@@ -110,14 +110,14 @@
 
         numchar_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  $  |  {  |  }   |  ^   |  +   |                   |  |   |   7   |   8   |  9   |       | VOLCTR |
-// |  TAB  |  #  |  (  |  )   |  *   |  =   |                   |  \   |   4   |   5   |  6   |       | DELETE |
+// |  ESC  |  $  |  {  |  }   |  ^   |  +   |                   |  |   |   7   |   8   |  9   |       |        |
+// |  TAB  |  #  |  (  |  )   |  *   |  =   |                   |  \   |   4   |   5   |  6   |       |        |
 // | SHIFT |  &  |  [  |  ]   |  %   |  -   |                   |  /   |   1   |   2   |  3   |       | RSHFT  |
 // | CTRL  |  @  |  ~  |  `   | Fn?  | "_"  |        |  |       |      |   0   |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
 &kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp CARET  &kp PLUS                           &kp PIPE   &kp N7   &kp N8   &kp N9   &trans   &trans
-&kp TAB    &kp HASH  &lpar_lbkt &rpar_rbkt &kp ASTRK  &kp EQUAL                          &kp BSLH   &kp N4   &kp N5   &kp N6   &trans   &kp DELETE
+&kp TAB    &kp HASH  &lpar_lbkt &rpar_rbkt &kp ASTRK  &kp EQUAL                          &kp BSLH   &kp N4   &kp N5   &kp N6   &trans   &trans
 &kp LSHFT  &kp AMPS  &kp LT     &kp GT     &kp PRCNT  &kp MINUS                          &kp FSLH   &kp N1   &kp N2   &kp N3   &trans   &kp RSHFT
 &kp LCTRL  &kp AT    &kp TILDE  &kp GRAVE  &trans     &kp UNDER  &trans     &tog QWERTY  &trans     &kp N0   &trans   &trans   &trans   &kp RCTRL
                                 &kp LGUI   &kp LALT   &mo 1      &kp SPACE  &kp BSPC     &mo 2      &kp RET  &kp RALT
