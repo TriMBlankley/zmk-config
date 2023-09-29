@@ -32,38 +32,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
-//        lpar_lbkt: lparenthesis_lbracket {
-//            compatible = "zmk,behavior-mod-morph";
-//            label = "LPAR_LBKT";
-//            #binding-cells = <0>;
-//            bindings = <&kp LPAR>, <&kp LBKT>;
-//            mods = <(MOD_LSFT|MOD_RSFT)>;
-//            keep-mods = <(MOD_RSFT)>;
-//        };
-//        rpar_rbkt: rparenthesis_rbracket {
-//            compatible = "zmk,behavior-mod-morph";
-//            label = "RPAR_RBKT";
-//            #binding-cells = <0>;
-//            bindings = <&kp RPAR>, <&kp RBKT>;
-//            mods = <(MOD_LSFT|MOD_RSFT)>;
-//            keep-mods = <(MOD_RSFT)>;
-//        };
-//        vol_ctrl: volume_control {
-//            compatible = "zmk,behavior-mod-morph";
-//            label = "VOL_CTRL";
-//            #binding-cells = <0>;
-//            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
-//            mods = <(MOD_LSFT|MOD_RSFT)>;
-//            keep-mods = <(MOD_RSFT)>;
-//        };
-//        brit_ctrl: brightness_control {
-//            compatible = "zmk,behavior-mod-morph";
-//            label = "BRIT_CTRL";
-//            #binding-cells = <0>;
-//            bindings = <&kp C_BRI_UP>, <&kp C_BRI_DN>;
-//            mods = <(MOD_LSFT|MOD_RSFT)>;
-//            keep-mods = <(MOD_RSFT)>;
-//        };
     };
 };
 
