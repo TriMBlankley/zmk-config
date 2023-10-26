@@ -80,13 +80,13 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  $  |  {  |  }   |  |   |      |                   |      |   7   |   8   |  9   |  DIV  |        |
 // |  TAB  |  #  |  ([ |  )]  |  \   |  /   |                   |      |   4   |   5   |  6   |   *   |        |
-// | SHIFT |  &  |  <  |  >   |      |      |                   |      |   1   |   2   |  3   |   -   | RSHFT  |
+// | SHIFT |  &  |  <  |  >   |  _   |      |                   |      |   1   |   2   |  3   |   -   | RSHFT  |
 // | CTRL  |  @  |  ~  |  `   |      |      |        |  |       |      |   0   |   =   |  ^   |   +   | RCTRL  |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
 &kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp PIPE   &trans                            &trans     &kp N7   &kp N8       &kp N9     &kp KP_DIVIDE    &trans
 &kp TAB    &kp HASH  &kp LPAR   &kp RPAR   &kp BSLH   &kp FSLH                          &trans     &kp N4   &kp N5       &kp N6     &kp KP_MULTIPLY  &trans
-&kp LSHFT  &kp AMPS  &kp LT     &kp GT     &trans     &trans                            &trans     &kp N1   &kp N2       &kp N3     &kp KP_SUBTRACT  &kp RSHFT
+&kp LSHFT  &kp AMPS  &kp LT     &kp GT     &kp UNDER  &trans                            &trans     &kp N1   &kp N2       &kp N3     &kp KP_SUBTRACT  &kp RSHFT
 &kp LCTRL  &kp AT    &kp PRCNT  &kp TILDE  &kp GRAVE  &trans    &trans     &tog QWERTY  &trans     &kp N0   &kp KP_EQUAL &kp CARET  &kp KP_PLUS      &kp RCTRL
                                 &kp LGUI   &kp LALT   &mo 1     &kp SPACE  &kp BSPC     &mo 2      &kp RET  &kp RALT
             >;
@@ -98,8 +98,8 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  TOG  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+// | SHIFT |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | CTRL  |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  TOG  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| &bt BT_CLR | GUI   |
             bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                        &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp GRAVE
