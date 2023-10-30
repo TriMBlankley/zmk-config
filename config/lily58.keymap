@@ -32,14 +32,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
-        con_num: control_numchar {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CON_NUM";
-            #binding-cells = <0>;
-            bindings = <&tog CONTROL>, <&tog NUMCHAR>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
     };
 };
 
@@ -59,7 +51,7 @@
 &kp ESC    &kp Q   &kp D   &kp R     &kp W     &kp B                             &kp J   &kp F     &kp U      &kp P    &kp SEMI    &kp PSCRN
 &kp TAB    &kp A   &kp S   &kp H     &kp T     &kp G                             &kp Y   &kp N     &kp E      &kp O    &kp I       &kp APOS
 &kp LSHFT  &kp Z   &kp X   &kp M     &kp C     &kp V                             &kp K   &kp L     &kp COMMA  &kp DOT  &excl_qmark &kp RSHFT
-&kp LCTRL  &kp AT  &trans  &trans    &trans    &trans   &con_num     &tog QWERTY &trans  &trans    &trans     &trans   &trans      &kp RCTRL
+&kp LCTRL  &kp AT  &trans  &trans    &trans    &trans   &tog CONTROL    &tog QWERTY &trans  &trans    &trans     &trans   &trans      &kp RCTRL
                            &kp LGUI  &kp LALT  &mo 1    &kp SPACE    &bspc_del   &mo 2   &kp RET   &kp RALT
             >;
 
@@ -77,7 +69,7 @@
 &kp ESC    &trans        &kp INS       &kp HOME      &kp PG_UP     &trans                                &trans    &trans     &kp UP     &kp C_PP     &kp C_VOL_DN &kp C_VOL_UP
 &kp TAB    &trans        &kp DEL       &kp END       &kp PG_DN     &trans                                &trans    &kp LEFT   &kp DOWN   &kp RIGHT    &trans       &trans
 &kp LSHFT  &trans        &trans        &trans        &trans        &trans                                &trans    &trans     &trans     &trans       &trans       &kp RSHFT
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &con_num   &tog QWERTY  &trans    &trans     &bt BT_CLR &kp C_BRI_DN &kp C_BRI_UP &kp RCTRL
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &tog CONTROL   &tog QWERTY  &trans    &trans     &bt BT_CLR &kp C_BRI_DN &kp C_BRI_UP &kp RCTRL
                                        &kp LGUI      &kp LALT      &mo 1         &kp SPAC   &kp BSPC     &mo 2     &kp RET    &kp RALT
             >;
 
@@ -95,7 +87,7 @@
 &kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp PIPE   &trans                              &trans     &kp N7   &kp N8       &kp N9     &kp KP_DIVIDE    &trans
 &kp TAB    &kp HASH  &kp LPAR   &kp RPAR   &kp BSLH   &kp FSLH                            &trans     &kp N4   &kp N5       &kp N6     &kp KP_MULTIPLY  &trans
 &kp LSHFT  &kp AMPS  &kp LT     &kp RBKT   &kp LBKT   &kp GT                              &trans     &kp N1   &kp N2       &kp N3     &kp KP_SUBTRACT  &kp RSHFT
-&kp LCTRL  &kp AT    &kp PRCNT  &kp TILDE  &kp GRAVE  &kp UNDER  &con_num    &tog QWERTY  &trans     &kp N0   &kp KP_EQUAL &kp CARET  &kp KP_PLUS      &kp RCTRL
+&kp LCTRL  &kp AT    &kp PRCNT  &kp TILDE  &kp GRAVE  &kp UNDER  &tog CONTROL   &tog QWERTY  &trans     &kp N0   &kp KP_EQUAL &kp CARET  &kp KP_PLUS      &kp RCTRL
                                 &kp LGUI   &kp LALT   &mo 1      &kp SPACE   &kp BSPC     &mo 2      &kp RET  &kp RALT
             >;
 
