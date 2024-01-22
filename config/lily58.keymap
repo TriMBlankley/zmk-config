@@ -86,17 +86,17 @@
 
         numchar_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  $  |  {  |  }   |  |   |      |                  |      |   7   |   8   |  9   |  DIV  |        |
-// |  TAB  |  #  |  (  |  )   |  \   |  /   |                  |      |   4   |   5   |  6   |   *   |        |
-// | SHIFT |  &  |  [  |  ]   |  <   |  >   |                  |      |   1   |   2   |  3   |   -   | RSHFT  |
-// | CTRL  |  @  |  %  |  ~   |  `   |  _   |CON_NUM|  | QWERT |      |   0   |   =   |  ^   |   +   | RCTRL  |
+// |  ESC  |  $  |  {  |  }   |  |   |      |                  | DIV  |   7   |   8   |  9   |   ^   |        |
+// |  TAB  |  #  |  (  |  )   |  \   |  /   |                  |  *   |   4   |   5   |  6   |   0   |   =    |
+// | SHIFT |  &  |  [  |  ]   |  <   |  >   |                  |  +   |   1   |   2   |  3   |   -   | RSHFT  |
+// | CTRL  |  @  |  %  |  ~   |  `   |  _   |CON_NUM|  | QWERT |      |       |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER| SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
-&kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp PIPE   &trans                                &trans       &kp N7   &kp N8       &kp N9     &kp KP_DIVIDE    &trans
-&kp LSHFT  &kp HASH  &kp LPAR   &kp RPAR   &kp BSLH   &kp FSLH                              &trans       &kp N4   &kp N5       &kp N6     &kp KP_MULTIPLY  &trans
-&kp TAB    &kp AMPS  &kp LBKT   &kp RBKT   &kp LT     &kp GT                                &trans       &kp N1   &kp N2       &kp N3     &kp KP_SUBTRACT  &kp RSHFT
-&kp LCTRL  &kp AT    &kp PRCNT  &kp TILDE  &kp GRAVE  &kp UNDER    &con_num    &tog QWERTY  &trans       &kp N0   &kp KP_EQUAL &kp CARET  &kp KP_PLUS      &kp RCTRL
-                                &kp LGUI   &kp LALT   &mo CONTROL  &kp SPACE   &bspc_del    &mo NUMCHAR  &kp RET  &kp RALT
+&kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp PIPE   &trans                                &kp KP_DIVIDE       &kp N7   &kp N8       &kp N9     &kp CARET        &trans
+&kp LSHFT  &kp HASH  &kp LPAR   &kp RPAR   &kp BSLH   &kp FSLH                              &kp KP_MULTIPLY     &kp N4   &kp N5       &kp N6     &kp N0           &trans
+&kp TAB    &kp AMPS  &kp LBKT   &kp RBKT   &kp LT     &kp GT                                &kp KP_PLUS         &kp N1   &kp N2       &kp N3     &kp KP_SUBTRACT  &kp RSHFT
+&kp LCTRL  &kp AT    &kp PRCNT  &kp TILDE  &kp GRAVE  &kp UNDER    &con_num    &tog QWERTY  &trans              &trans   &trans       &trans     &trans           &kp RCTRL
+                                &kp LGUI   &kp LALT   &mo CONTROL  &kp SPACE   &bspc_del    &mo NUMCHAR         &kp RET  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
