@@ -14,6 +14,7 @@
 #define NUMCHAR  2
 #define QWERTY   3
 #define BLENDER  4
+#define UNREAL   5
 
 / {
     behaviors {
@@ -63,7 +64,7 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |     | INS | HOME | PG_UP|      |                   |      |       |   ^   |  >=   | VOL_DN| VOL_UP |
 // | SHIFT |     | DEL | END  | PG_DN|      |                   |      |   <-  |   V   |  ->   | BRI_DN| BRI_UP|
-// |  TAB  |     |     |      |      |      |                  |TOG BLEND|     |       |       |       | RSHFT  |
+// |  TAB  |     |     |      |      |      |                 |TOG BLEND|TOG UNREAL|   |       |       | RSHFT  |
 // | CTRL  | BT1 | BT2 |  BT3 |  BT4 |  BT5 | CON_NUM|  | QWERT |BT CLR|       |       |       |       | RCTRL  |
 //                     |  GUI | LALT | LOWER|  SPACE |  | BKSPC | RAISE| BTCLR | RALT  |
             bindings = <
@@ -114,6 +115,23 @@
         };
 
         blender_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  ESC  |     |     |      |      |      |                  |      |       |       |      |       |        |
+// |  TAB  |     |     |      |      |      |                  |      |       |       |      |       |        |
+// | SHIFT |     |     |      |      |      |                  |      |       |       |      |       | RSHFT  |
+// | CTRL  |     |     |      |      |      |CON_NUM|  | QWERT |      |       |       |      |       | RCTRL  |
+//                     | ALT  | GUI  | LOWER| SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
+            bindings = <
+&kp ESC     &trans   &trans  &trans   &trans   &trans                                &trans       &trans   &trans   &trans   &trans    &trans
+&kp LSHFT   &trans   &trans  &trans   &trans   &trans                                &trans       &trans   &trans   &trans   &trans    &trans
+&kp TAB     &trans   &trans  &trans   &trans   &trans                                &trans       &trans   &trans   &trans   &trans    &kp RSHFT
+&kp LCTRL   &trans   &trans  &trans   &trans   &trans      &con_num    &tog QWERTY   &trans       &trans   &trans   &trans   &trans    &kp RCTRL
+                             &kp LGUI &kp LALT &mo CONTROL &kp SPACE   &kp BACKSPACE &mo NUMCHAR  &kp RET  &kp RALT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+            unreal_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |     |     |      |      |      |                  |      |       |       |      |       |        |
 // |  TAB  |     |     |      |      |      |                  |      |       |       |      |       |        |
