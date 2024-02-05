@@ -80,15 +80,15 @@
 
         numchar_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  $  |  {  |  }   |  |   |      |                  | DIV  |   7   |   8   |  9   |   ^   |        |
+// |  ESC  |  $  |  {  |  }   |  |   |      |                  | DIV  |   7   |   8   |  9   |   +   |        |
 // |  TAB  |  #  |  (  |  )   |  \   |  /   |                  |  *   |   4   |   5   |  6   |   0   |   =    |
-// | SHIFT |  &  |  [  |  ]   |  <   |  >   |                  |  +   |   1   |   2   |  3   |   -   | RSHFT  |
+// | SHIFT |  &  |  [  |  ]   |  <   |  >   |                  |  ^   |   1   |   2   |  3   |   -   | RSHFT  |
 // | CTRL  |  @  |  %  |  ~   |  `   |  _   |CON_NUM|  | QWERT |      |       |       |      |       | RCTRL  |
 //                     | ALT  | GUI  | LOWER| SPACE |  | BKSPC | RAISE|  ENT  | BTCLR |
             bindings = <
-&kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp PIPE   &trans                                 &kp KP_DIVIDE       &kp N7   &kp N8       &kp N9     &kp CARET        &trans
+&kp ESC    &kp DLLR  &kp LBRC   &kp RBRC   &kp PIPE   &trans                                 &kp KP_DIVIDE       &kp N7   &kp N8       &kp N9     &kp KP_PLUS      &trans
 &kp LSHFT  &kp HASH  &kp LPAR   &kp RPAR   &kp BSLH   &kp FSLH                               &kp KP_MULTIPLY     &kp N4   &kp N5       &kp N6     &kp N0           &kp EQUAL
-&kp TAB    &kp AMPS  &kp LBKT   &kp RBKT   &kp LT     &kp GT                                 &kp KP_PLUS         &kp N1   &kp N2       &kp N3     &kp KP_SUBTRACT  &kp RSHFT
+&kp TAB    &kp AMPS  &kp LBKT   &kp RBKT   &kp LT     &kp GT                                 &kp CARET           &kp N1   &kp N2       &kp N3     &kp KP_SUBTRACT  &kp RSHFT
 &kp LCTRL  &kp AT    &kp PRCNT  &kp TILDE  &kp GRAVE  &kp UNDER    &con_num    &tog QWERTY   &trans              &trans   &trans       &trans     &trans           &kp RCTRL
                                 &kp LGUI   &kp LALT   &mo CONTROL  &kp SPACE   &kp BACKSPACE &mo NUMCHAR         &kp RET  &kp RALT
             >;
