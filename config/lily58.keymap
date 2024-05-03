@@ -47,13 +47,13 @@
 // |  ESC  |  Q  |  D  |  R   |  W   |  B   |                       |  J   |  F   |  U    |  P   |   ;   | PSCRN |
 // | SHIFT |  A  |  S  |  H   |  T   |  G   |                       |  Y   |  N   |  E    |  O   |   I   | APOS  |
 // |  TAB  |  Z  |  X  |  M   |  C   |  V   |                       |  K   |  L   |  ,    |  .   |   !   | RSHFT |
-// | CTRL  |  @  |     |      |      |      |TOG CON|   |  TOG QWER |      |      |       |      |       | RCTRL |
+// | CTRL  |     |     |      |  @   |      |TOG CON|   |  TOG QWER |      |      |       |      |       | RCTRL |
 //                     | GUI  | LALT |LOWER | SPACE |   | BKSPC_DEL | RAISE| ENT  |  ALT  |
             bindings = <
 &kp ESC    &kp Q   &kp D   &kp R     &kp W     &kp B                                   &kp J   &kp F     &kp U      &kp P    &kp SEMI    &kp PSCRN
 &kp TAB    &kp A   &kp S   &kp H     &kp T     &kp G                                   &kp Y   &kp N     &kp E      &kp O    &kp I       &kp APOS
 &kp LSHFT  &kp Z   &kp X   &kp M     &kp C     &kp V                                   &kp K   &kp L     &kp COMMA  &kp DOT  &excl_qmark &kp RSHFT
-&kp LCTRL  &kp AT  &trans  &trans    &trans    &trans       &con_num     &tog QWERTY   &trans  &trans    &trans     &trans   &trans      &kp RCTRL
+&kp LCTRL  &trans  &trans  &trans    &kp AT    &trans       &con_num     &tog QWERTY   &trans  &trans    &trans     &trans   &trans      &kp RCTRL
                            &kp LGUI  &kp LALT  &mo CONTROL  &kp SPACE    &kp BACKSPACE &mo NUMCHAR   &kp RET   &kp RALT
             >;
 
